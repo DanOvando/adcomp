@@ -12,7 +12,7 @@ os:
   - linux
 ##  - osx
 
-dist: trusty
+##dist: trusty
 
 install:
   - export OMP_NUM_THREADS=2
