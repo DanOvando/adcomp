@@ -6,7 +6,7 @@ r:
 
 sudo: false
 
-cache: packages
+## cache: packages
 
 os:
   - linux
@@ -21,7 +21,7 @@ install:
   - tar zxf doxygen-1.8.12.linux.bin.tar.gz
   - export PATH=`pwd`/doxygen-1.8.12/bin:$PATH
   - doxygen -v
-  - Rscript -e 'pkg <- c("RcppEigen", "numDeriv", "parallel", "knitr", "bookdown", "rsvg"); if(!all(pkg%in%installed.packages()))install.packages(pkg)'
+  - Rscript -e 'pkg <- c("RcppEigen", "numDeriv", "parallel", "knitr", "bookdown", "rsvg", "brew"); if(!all(pkg%in%installed.packages()))install.packages(pkg)'
   - Rscript -e 'problemPkg <- "roxygen2_5.0.1.tar.gz"; pkg <- c("roxygen2"); if(!all(pkg%in%installed.packages()))install.packages(problemPkg, repos=NULL)'
 
 script:
